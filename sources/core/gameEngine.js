@@ -235,7 +235,7 @@ export default class GameEngine
                 ctx.resume();
             }
 
-            console.log("Audio state:", ctx.state);
+            // console.log("Audio state:", ctx.state);
         };
         this.context.screen.canvas.addEventListener("touchstart", unlockAudio, { passive: true });
 
@@ -264,7 +264,6 @@ export default class GameEngine
 
     update() 
     {
-        console.log(this.context.audios.ctx.state);
         //シーンによって処理を変える
         switch (this.context.sceneCurrent) 
         {
