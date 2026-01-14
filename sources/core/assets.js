@@ -1,4 +1,3 @@
-// core/Assets.js
 export default class Assets 
 {
     images = {};

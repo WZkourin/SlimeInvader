@@ -16,6 +16,13 @@ export default class GuiScore
     //スコアを増やす
     addScore(value)
     {
+        //間違って負の数が渡されたら修正
+        if (value < 0)
+        {
+            console.log("負の数が渡されました addScore()");
+            value *= -1;
+        }
+
         //最高スコア以上は増やさない
         if (this.score < this.scoreLimit) { this.score += value; }    
     }
