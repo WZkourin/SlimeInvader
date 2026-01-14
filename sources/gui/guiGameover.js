@@ -10,10 +10,6 @@ export default class GuiGameover
 
     }
 
-    update()
-    {
-    }
-
     draw(ctx)
     {
         const showOffsetX = this.context.screen.baseWidth / 3;

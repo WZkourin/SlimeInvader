@@ -1,7 +1,3 @@
-// ============================
-// Bullet クラス
-// ============================
-
 export default class PlayerBullet 
 {
     constructor(context, x, y) 

@@ -1,7 +1,3 @@
-// ============================
-// Player クラス
-// ============================
-
 import PlayerBullet from "./playerBullet.js";
 import EffectExplosion from "../gui/effectExplosion.js";
 

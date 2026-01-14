@@ -104,6 +104,7 @@ export default class PlayerBullet
         const spriteDown = this.y + this.spriteCutSizeY / 2;
         const spriteUp = this.y - this.spriteCutSizeY / 2;
 
+        //最初に渡されたIDによって弾の種類(軌道)を変える
         switch (this.bulletId) 
         {
             case 1:
@@ -148,6 +149,7 @@ export default class PlayerBullet
 
     onCollision(other)
     {
+        //現時点では何もないがこの関数が無いと判定時に参照できなくなる
     }
 
     draw(ctx) 

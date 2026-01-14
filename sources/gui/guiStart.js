@@ -98,6 +98,7 @@ export default class GuiStart
         //タイトル以外は描画しない
         if (this.context.sceneCurrent !== this.context.scenes.title) { return; }
 
+        //sin波により表示フラグがオフの時は描画しない
         if (this.isShow === false) { return; }
 
         for (let index = 0; index < stringStartRow.length; index++) 

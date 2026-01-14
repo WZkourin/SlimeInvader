@@ -1,7 +1,3 @@
-// ============================
-// Enemy クラス
-// ============================
-
 import EnemyBullet from "./enemyBullet.js";
 import EffectExplosion from "../gui/effectExplosion.js";
 
@@ -98,6 +94,7 @@ export default class Enemy
         this.shotBeforeInterval = Math.random() * ((this.verticalInterval + 1.0) - 0.0) + 0.0;
     }
 
+    //移動処理
     move()
     {
         const canvas = this.context.screen.canvas;
@@ -113,7 +110,7 @@ export default class Enemy
         const isOverScreenRight = imageRight > canvas.width;
         const isOverScreenLeft = imageLeft < canvas.width - canvas.width;
 
-        //移動処理
+        //画像が右向きの時は右に移動する
         if (this.isImageRight)
         {
             this.x += this.speed * deltaTime;
@@ -178,9 +175,6 @@ export default class Enemy
         const inclination = (verticalIntervalMin - this.verticalIntervalInit) / (speedMax - this.speedInit); //補完計算用の傾き
         const section = this.verticalIntervalInit - inclination * this.speedInit; //補完計算用の切片
 
-        // console.log(inclination);
-        // console.log(section);
-
         this.speed++; //スピードを増やす
         this.verticalInterval = inclination * this.speed + section; //それに合わせて縦移動のタイミング時間を補完
     }
@@ -200,7 +194,7 @@ export default class Enemy
 
     onCollision(other)
     {
-
+        //Playerの弾に当たった時の処理
         if (other.tag === "playerBullet")
         {
             this.context.effects.push(new EffectExplosion(this.context, this.x, this.y));

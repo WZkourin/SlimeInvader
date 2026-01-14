@@ -1,4 +1,3 @@
-// core/Game.js
 import GameContext from "./gameContext.js";
 import Player from "../objects/player.js";
 import Enemy from "../objects/enemy.js";
@@ -333,9 +332,6 @@ export default class GameEngine
                 this.context.playerBullets = this.context.playerBullets.filter(e => e.isDead === false);
                 this.context.enemyBullets = this.context.enemyBullets.filter(e => e.isDead === false);
 
-                //スコア管理
-                this.guiScore.update();
-
                 //ステージ管理
                 this.guiStage.update();
 
@@ -367,8 +363,6 @@ export default class GameEngine
                 break;
         
             case this.context.scenes.Gameover:
-
-                this.guiGameover.update();
 
                 //クリッククールダウンのタイマーを進める
                 this.advanceClickCooldownTimer();

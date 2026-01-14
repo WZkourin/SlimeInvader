@@ -1,4 +1,3 @@
-// core/Screen.js
 export default class Screen 
 {
     baseWidth  = 414;

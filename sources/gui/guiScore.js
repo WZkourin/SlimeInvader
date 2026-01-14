@@ -1,5 +1,3 @@
-
-
 export default class GuiScore 
 {
     constructor(context) 
@@ -26,10 +24,6 @@ export default class GuiScore
     resetScore()
     {
         this.score = 0;
-    }
-
-    update()
-    {
     }
 
     draw(ctx)

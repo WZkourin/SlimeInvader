@@ -1,5 +1,5 @@
-// core/Input.js
-export default class Input {
+export default class Input 
+{
     pointer = { x: 0, y: 0, down: false };
 
     init(canvas, screen) {
