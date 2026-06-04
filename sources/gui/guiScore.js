@@ -9,8 +9,6 @@ export default class GuiScore
 
         //画像関係
         this.image = context.assets.get("dotStrings");
-
-
     }
 
     //スコアを増やす

@@ -22,6 +22,7 @@ export default class Assets
         await this.loadImage("dotStrings", "assets/images/dotStrings.png");
         await this.loadImage("explosion", "assets/images/explosion.png");
         await this.loadImage("backgroundFlash", "assets/images/backgroundFlash.png");
+        await this.loadImage("titleLogo", "assets/images/titleLogo.png");
     }
 
     get(name) 

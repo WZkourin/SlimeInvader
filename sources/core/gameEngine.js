@@ -5,6 +5,7 @@ import GuiScore from "../gui/guiScore.js";
 import GuiStage from "../gui/guiStage.js";
 import GuiStart from "../gui/guiStart.js";
 import GuiGameover from "../gui/guiGameover.js";
+import GuiTitleLogo from "../gui/guiTitleLogo.js";
 import BackgroundFlash from "../gui/backgroundFlash.js";
 
 export default class GameEngine 
@@ -28,6 +29,7 @@ export default class GameEngine
         this.guiGameover = null;
         this.guiScore = null;
         this.guiStage = null;
+        this.guiTitleLogo = null;
         this.backgroundFlash = null;
 
         //敵スポーンフラグ
@@ -243,6 +245,7 @@ export default class GameEngine
         this.guiGameover = new GuiGameover(this.context);
         this.guiScore = new GuiScore(this.context);
         this.guiStage = new GuiStage(this.context);
+        this.guiTitleLogo = new GuiTitleLogo(this.context);
         this.backgroundFlash = new BackgroundFlash(this.context);
 
         requestAnimationFrame(t => this.loop(t));
@@ -399,6 +402,7 @@ export default class GameEngine
         this.guiGameover.draw(ctx);
         this.guiScore.draw(ctx);
         this.guiStage.draw(ctx);
+        this.guiTitleLogo.draw(ctx);
         this.backgroundFlash.draw(ctx);
         this.context.effects.forEach(e => e.draw(ctx));
 
