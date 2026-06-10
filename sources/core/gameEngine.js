@@ -251,16 +251,21 @@ export default class GameEngine
         requestAnimationFrame(t => this.loop(t));
     }
 
+    //実際にゲームの時を進める処理
     loop(timestamp) 
     {
+        //前のフレームとの差を計算する
         const deltaTime = (timestamp - this.lastTime) / 1000;
-        this.lastTime = timestamp;
+        this.lastTime = timestamp; //次フレームとの差分計算用変数
 
+        //deltaTime代入(どの機種でも速度を統一するため)
         this.context.time.delta = deltaTime;
 
+        //ここでゲームロジックが記述されている関数を動かす
         this.update();
         this.draw();
 
+        //次のフレームの直前に実行される
         requestAnimationFrame(t => this.loop(t));
     }
 

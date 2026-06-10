@@ -15,8 +15,8 @@ export default class Assets
 
     async loadAll() 
     {
-        await this.loadImage("reito", "assets/images/reito.png");
-        await this.loadImage("slalin", "assets/images/slalin.png");
+        await this.loadImage("wolf", "assets/images/wolf.png");
+        await this.loadImage("slime", "assets/images/slime.png");
         await this.loadImage("thunder", "assets/images/thunder.png");
         await this.loadImage("fire", "assets/images/fire.png");
         await this.loadImage("dotStrings", "assets/images/dotStrings.png");

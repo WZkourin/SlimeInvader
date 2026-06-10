@@ -24,7 +24,7 @@ export default class Enemy
         //自身の削除フラグ
         this.isDead = false;
 
-        //弾関係パラメータ群
+        //弾関係パラメータ群(特定のステージ以降によって弾の種類が変わる)
         this.bulletIdRand = 0;
         if (this.stage.stage < 20) { this.bulletIdRandMax = 1; }
         else if (this.stage.stage < 30) { this.bulletIdRandMax = 2; }
@@ -39,7 +39,7 @@ export default class Enemy
         this.shotBeforeInterval = 0.0;
 
         //画像関係
-        this.image = context.assets.get("slalin");
+        this.image = context.assets.get("slime");
         const imageSize = 35;
         const imageSizeMargin = 10; //自然に見えるように少し横長にする
         this.imageWidth = imageSize + imageSizeMargin;

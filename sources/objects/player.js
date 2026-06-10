@@ -22,7 +22,7 @@ export default class Player
         this.shotInterval = 0.15;
 
         //画像関係
-        this.image = context.assets.get("reito");
+        this.image = context.assets.get("wolf");
         const imageSize = 60;
         this.imageWidth = imageSize;
         this.imageHeight = imageSize;
